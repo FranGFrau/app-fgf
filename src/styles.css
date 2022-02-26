@@ -46,6 +46,15 @@ header .links button img {
   height: 50px;
 }
 /*                    Main                     */
+main .ItemList {
+  width: 100%;
+  height: 400px;
+  background-color: rgb(87, 87, 87);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 /*                    Footer                    */
 footer {
   width: 100%;
