@@ -46,7 +46,7 @@ header .links button img {
   height: 50px;
 }
 /*                    Main                     */
-main .ItemList {
+main .itemList {
   width: 100%;
   height: 400px;
   background-color: rgb(87, 87, 87);
@@ -54,6 +54,44 @@ main .ItemList {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+main .itemList .item {
+  width: 19%;
+  height: 300px;
+  background-color: aliceblue;
+}
+main .itemList .item .box {
+  display: flex;
+  border: 1px solid rgb(0, 100, 255);
+  border-radius: 5px;
+  justify-content: center;
+}
+main .itemList .item .under-box {
+  display: flex;
+  width: 95%;
+  margin: auto;
+}
+main .itemList .item .under-box span {
+  width: 15%;
+}
+main .itemList .item .under-box p {
+  width: 15%;
+}
+main .itemList .item .under-box button {
+  width: 70%;
+}
+main .itemList .item .box button {
+  width: 12%;
+  background-color: aliceblue;
+  color: rgb(0, 100, 255);
+  border: 0;
+}
+main .itemList .item .box p {
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  border-left: 1px solid rgb(0, 100, 255);
+  border-right: 1px solid rgb(0, 100, 255);
 }
 /*                    Footer                    */
 footer {
