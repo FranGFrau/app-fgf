@@ -6,7 +6,6 @@ const ItemCount = (props) => {
   const [stock, setStock] = useState(props.stock);
   const [boton, setBoton] = useState(true);
   const aux = props.stock;
-  const button = document.querySelector("boton");
 
   const ValidarBoton = () => {
     if (aux === valor) {
