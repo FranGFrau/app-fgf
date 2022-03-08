@@ -55,6 +55,13 @@ main .itemList {
   align-items: center;
   justify-content: center;
 }
+main .itemList .itemCard {
+  width: 19%;
+  height: 350px;
+  background-color: black;
+  margin: auto;
+}
+
 main .itemList .item {
   width: 19%;
   height: 300px;
