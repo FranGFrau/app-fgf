@@ -8,7 +8,7 @@ const productos = [
   {
     id: 2,
     nombre: "Producto 2",
-    imagen: "../../public/test.jpg",
+    imagen: "../test.jpg",
     precio: 310,
   },
   {
