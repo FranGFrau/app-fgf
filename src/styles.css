@@ -61,6 +61,10 @@ main .itemList .itemCard {
   background-color: black;
   margin: auto;
 }
+main .itemList .itemCard img {
+  width: 100px;
+  height: 100px;
+}
 
 main .itemList .item {
   width: 19%;

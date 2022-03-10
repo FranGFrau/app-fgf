@@ -1,31 +1,34 @@
 import React from "react";
+import { useState } from "react";
+import { useEffect } from "react";
 import ItemList from "./ItemList";
-
-const productosIniciales = [
-  {
-    id: 1,
-    nombre: "Producto 1",
-    imagen: "../test.jpg",
-    precio: 300,
-  },
-  {
-    id: 2,
-    nombre: "Producto 2",
-    imagen: "../test.jpg",
-    precio: 310,
-  },
-  {
-    id: 3,
-    nombre: "Producto 3",
-    imagen: "../test.jpg",
-    precio: 320,
-  },
-];
+import productos from "./Data";
 
 const ItemListContainer = () => {
+  const [data, setData] = useState([]);
+  const [carga, setCarga] = useState(true);
+
+  useEffect(() => {
+    const promesa = new Promise((res) => {
+      setTimeout(() => {
+        res(productos);
+      }, 2000);
+    });
+    promesa
+      .then((respuesta) => {
+        setData(respuesta);
+      })
+      .catch((error) => {
+        console.log(error);
+      })
+      .finally(() => {
+        setCarga(false);
+      });
+  });
+
   return (
     <div className="itemList">
-      <ItemList array={productosIniciales} />
+      <ItemList array={data} carga={carga} />
     </div>
   );
 };
