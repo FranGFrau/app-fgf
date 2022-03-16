@@ -1,14 +1,19 @@
 import React from "react";
-import ItemDetailContainer from "./ItemDetailContainer";
 import ItemListContainer from "./ItemListContainer";
-const miOnAdd = () => {};
+import { Routes, Route } from "react-router-dom";
+import Cart from "./Cart";
+import ItemDetailContainer from "./ItemDetailContainer";
 
 const Main = () => {
   return (
     <>
       <main>
-        <ItemListContainer onAdd={miOnAdd} />
-        <ItemDetailContainer />
+        <Routes>
+          <Route path="/" element={<ItemListContainer />} />
+          <Route path="/category/:id" element={<ItemListContainer />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/item/:id" element={<ItemDetailContainer />} />
+        </Routes>
       </main>
     </>
   );

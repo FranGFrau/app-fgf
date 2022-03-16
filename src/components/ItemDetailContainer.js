@@ -3,16 +3,17 @@ import { useState } from "react";
 import { useEffect } from "react";
 import ItemDetail from "./ItemDetail";
 import productos from "../data/Data";
+import { useParams } from "react-router-dom";
 
 const ItemDetailContainer = () => {
-  const [item, setItem] = useState({});
+  const [item, setItem] = useState([]);
   const [carga, setCarga] = useState(true);
-
+  const { id } = useParams();
   useEffect(() => {
     const promesa = new Promise((res) => {
       setTimeout(() => {
-        res(productos[0]);
-      }, 2000);
+        res(productos[id - 1]);
+      }, 1000);
     });
     promesa
       .then((respuesta) => {
@@ -24,10 +25,10 @@ const ItemDetailContainer = () => {
       .finally(() => {
         setCarga(false);
       });
-  });
+  }, [id]);
   return (
     <div className="itemDetailList">
-      <ItemDetail item={item} carga={carga} />
+      <ItemDetail obj={item} carga={carga} />
     </div>
   );
 };
