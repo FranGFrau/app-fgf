@@ -6,12 +6,12 @@ const ItemDetail = (props) => {
       <p>{props.carga ? "Cargando." : ""}</p>
       <img src={props.obj.imagen} alt="" />
       <div className="itemDetail">
-        <div className="itemDetail__name">{props.obj.nombre}</div>
-        <div className="itemDetail__editorial">{props.obj.editorial}</div>
-        <div className="itemDetail__decription">{props.obj.descripción}</div>
-        <div className="itemDetail__pages">{props.obj.páginas}</div>
-        <div className="itemDetail__price">{props.obj.precio}</div>
-        <div className="itemDetail__stock">{props.obj.stock}</div>
+        <p className="detailTitulo">{props.obj.nombre}</p>
+        <p>{props.obj.editorial}</p>
+        <p>{props.obj.descripción}</p>
+        <p>Páginas:{props.obj.páginas}</p>
+        <p>${props.obj.precio}</p>
+        <p>{props.obj.stock}u</p>
       </div>
     </>
   );

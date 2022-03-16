@@ -4,18 +4,20 @@ import Item from "./Item";
 const ItemList = (props) => {
   return (
     <>
-      <p>{props.carga ? "Cargando." : "seccion de productos:"}</p>
-      {props.array.map((producto) => {
-        return (
-          <Item
-            key={producto.id}
-            id={producto.id}
-            nombre={producto.nombre}
-            imagen={producto.imagen}
-            precio={producto.precio}
-          />
-        );
-      })}
+      <p>{props.carga ? "Cargando." : `Seccion de productos`}</p>
+      <div className="itemList">
+        {props.array.map((producto) => {
+          return (
+            <Item
+              key={producto.id}
+              id={producto.id}
+              nombre={producto.nombre}
+              imagen={producto.imagen}
+              precio={producto.precio}
+            />
+          );
+        })}
+      </div>
     </>
   );
 };

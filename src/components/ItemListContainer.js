@@ -45,7 +45,7 @@ const ItemListContainer = () => {
   }, [id]);
 
   return (
-    <div className="itemList">
+    <div className="itemListCont">
       <ItemList array={data} carga={carga} />
     </div>
   );

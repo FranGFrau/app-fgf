@@ -11,11 +11,13 @@ header {
   display: flex;
   background-color: rgb(0, 100, 255);
 }
-header .logo {
+header a {
   width: 25%;
   display: flex;
   justify-content: center;
   align-items: center;
+  color: aliceblue;
+  text-decoration: none;
 }
 header .links {
   width: 75%;
@@ -46,31 +48,81 @@ header .links button img {
   height: 50px;
 }
 /*                    Main                     */
+main {
+  background-color: rgb(0, 90, 255);
+}
+main .itemListCont p {
+  height: 100px;
+  background-color: grey;
+  text-align: center;
+  padding-top: 35px;
+  font-size: xx-large;
+}
 main .itemList {
   width: 100%;
-  height: 400px;
-  background-color: rgb(87, 87, 87);
+  background-color: rgb(0, 100, 255);
   color: white;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 main .itemDetailList {
   background-color: grey;
-  width: 700px;
+  width: 92%;
   margin: auto;
+  display: flex;
+}
+main .itemDetailList img {
+  max-width: 400px;
+}
+main .itemDetailList .itemDetail {
+  width: 100%;
+  margin: auto;
+}
+main .itemDetailList .itemDetail p {
+  font-size: x-large;
+  margin: 1rem;
+}
+main .itemDetailList .itemDetail .detailTitulo {
+  font-size: xx-large;
+  margin-bottom: 1rem;
 }
 main .itemList .itemCard {
-  width: 19%;
-  height: 350px;
-  background-color: black;
+  width: 15%;
+  height: 400px;
+  background-color: grey;
   margin: auto;
+  margin: 20px;
 }
-main .itemList .itemCard img {
-  width: 100px;
-  height: 100px;
+main .itemList .itemCard .itemCard__img {
+  display: flex;
+  justify-content: center;
 }
+main .itemList .itemCard .itemCard__img img {
+  width: 92%;
+  height: 270px;
+  text-align: center;
+}
+main .itemList .itemCard .itemCard__nombre {
+  font-size: larger;
+  display: flex;
+  justify-content: center;
+}
+main .itemList .itemCard .itemCard__precio {
+  font-size: larger;
+  margin: 1rem;
+}
+main .itemList .itemCard a {
+  text-decoration: none;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 92%;
+  height: 40px;
 
+  background-color: aliceblue;
+}
 main .itemList .item {
   width: 19%;
   height: 300px;
