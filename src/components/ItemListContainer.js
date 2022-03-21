@@ -18,23 +18,10 @@ const ItemListContainer = () => {
     });
     promesa
       .then((respuesta) => {
-        setData(respuesta);
-        if (id === "libros") {
-          let libros = productos.filter(
-            (productos) => productos.tipo === "libros"
-          );
-          setData(libros);
-        } else if (id === "comics") {
-          let comics = productos.filter(
-            (productos) => productos.tipo === "comics"
-          );
-          setData(comics);
-        } else if (id === "mangas") {
-          let mangas = productos.filter(
-            (productos) => productos.tipo === "mangas"
-          );
-          setData(mangas);
-        }
+        const response = id
+          ? productos.filter((productos) => productos.tipo === id)
+          : productos;
+        setData(response);
       })
       .catch((error) => {
         console.log(error);

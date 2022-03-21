@@ -56,7 +56,7 @@ main .itemListCont p {
   background-color: grey;
   text-align: center;
   padding-top: 35px;
-  font-size: xx-large;
+  font-size: xx-laDetailrge;
 }
 main .itemList {
   width: 100%;
@@ -68,7 +68,7 @@ main .itemList {
 }
 main .itemDetailList {
   background-color: grey;
-  width: 92%;
+  width: 98%;
   margin: auto;
   display: flex;
 }
@@ -123,43 +123,50 @@ main .itemList .itemCard a {
 
   background-color: aliceblue;
 }
-main .itemList .item {
-  width: 19%;
+main .itemDetailList .item {
+  width: 24%;
   height: 300px;
   background-color: aliceblue;
+  display: block;
+  margin: auto;
 }
-main .itemList .item .box {
+main .itemDetailList .item .box {
   display: flex;
   border: 1px solid rgb(0, 100, 255);
   border-radius: 5px;
   justify-content: center;
 }
-main .itemList .item .under-box {
+main .itemDetailList .item .under-box {
   display: flex;
   width: 95%;
   margin: auto;
 }
-main .itemList .item .under-box span {
+main .itemDetailList .item .under-box span {
   width: 15%;
 }
-main .itemList .item .under-box p {
+main .itemDetailList .item .under-box p {
   width: 15%;
 }
-main .itemList .item .under-box button {
+main .itemDetailList .item .under-box button {
   width: 70%;
 }
-main .itemList .item .box button {
+main .itemDetailList .item .box button {
   width: 12%;
   background-color: aliceblue;
   color: rgb(0, 100, 255);
   border: 0;
 }
-main .itemList .item .box p {
+main .itemDetailList .item .box p {
   width: 75%;
   display: flex;
   justify-content: center;
   border-left: 1px solid rgb(0, 100, 255);
   border-right: 1px solid rgb(0, 100, 255);
+}
+main .itemDetailList button {
+  width: 24%;
+  height: 50px;
+  margin: auto;
 }
 /*                    Footer                    */
 footer {

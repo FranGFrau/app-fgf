@@ -12,12 +12,14 @@ const ItemDetailContainer = () => {
   useEffect(() => {
     const promesa = new Promise((res) => {
       setTimeout(() => {
-        res(productos[id - 1]);
+        res(productos);
       }, 1000);
     });
     promesa
       .then((respuesta) => {
-        setItem(respuesta);
+        const response =
+          id && respuesta.filter((producto) => producto.id.toString() === id);
+        setItem(response[0]);
       })
       .catch((error) => {
         console.log(error);

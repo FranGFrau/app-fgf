@@ -3,31 +3,20 @@ import { useState } from "react";
 
 const ItemCount = (props) => {
   const [valor, setValor] = useState(props.initial);
-  const [stock, setStock] = useState(props.stock);
-  const [boton, setBoton] = useState(true);
-  const aux = props.stock;
-
-  const ValidarBoton = () => {
-    if (aux === valor) {
-      setBoton(false);
-    } else {
-      setBoton(true);
-    }
-  };
 
   const clickAumentar = () => {
-    if (valor <= aux) {
+    if (valor < props.stock) {
       setValor(valor + 1);
-      setStock(stock - 1);
     }
-    ValidarBoton();
   };
   const clickDecrecer = () => {
     if (valor > 1) {
       setValor(valor - 1);
-      setStock(stock + 1);
     }
-    ValidarBoton();
+  };
+
+  const clickConfirmar = () => {
+    props.onAdd(valor, true);
   };
 
   return (
@@ -40,11 +29,9 @@ const ItemCount = (props) => {
       </div>
       <div className="under-box">
         <span>Stock:</span>
-        <p id="stock">
-          <p>{stock}</p>
-        </p>
-        <button id="boton">
-          {boton ? "Agregar al carrito" : "Fuera de stock"}
+        <p id="stock">{props.stock}</p>
+        <button id="boton" onClick={clickConfirmar}>
+          {"Agregar al carrito"}
         </button>
       </div>
     </div>
