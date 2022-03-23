@@ -1,7 +1,12 @@
 import React from "react";
 
 const IrAlCarrito = () => {
-  return <button>Terminar compra</button>;
+  return (
+    <div className="itemDetail">
+      <p className="detailTitulo">Ir al carrito</p>
+      <p></p>
+    </div>
+  );
 };
 
 export default IrAlCarrito;

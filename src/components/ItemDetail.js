@@ -1,14 +1,18 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import IrAlCarrito from "./IrAlCarrito";
 import ItemCount from "./ItemCount";
+import { context } from "./CartContext";
 
 const ItemDetail = (props) => {
+  const resultado = useContext(context);
   const [contador, setContador] = useState();
   const [estado, setEstado] = useState(false);
 
   const onAdd = (valorContador, valorEstado) => {
     setContador(valorContador);
     setEstado(valorEstado);
+    resultado.agregarAlCarrito(props.obj, valorContador);
+    resultado.calcularTotal();
   };
 
   return (
