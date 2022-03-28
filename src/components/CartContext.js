@@ -5,17 +5,27 @@ const { Provider } = context;
 const CartContext = ({ children }) => {
   const [cart, setCart] = useState([]);
   const [total, setTotal] = useState(0);
+  const [cantidad, setCantidad] = useState(0);
 
-  const removerDelCart = (producto) => {
-    const newCart = cart.filter((item) => item.producto.id !== producto.id);
+  const disminuirCart = (id) => {
+    const item = cart.find((item) => item.producto.id === id);
+    const index = cart.indexOf(item);
+    const newCart = [...cart];
+    newCart[index].contador -= 1;
+    if (newCart[index].contador === 0) {
+      newCart.splice(index, 1);
+    }
     setCart(newCart);
-    calcularTotal();
+    setCantidad(cantidad - 1);
+    setTotal(total - item.producto.precio);
   };
 
   const agregarAlCarrito = (producto, contador) => {
     let cartProductos = { producto, contador };
 
     let cartAux = [];
+    setCantidad(cantidad + contador);
+
     if (isInCart(producto)) {
       cartAux = cart.map((item) => {
         if (item.producto.id === producto.id) {
@@ -27,7 +37,8 @@ const CartContext = ({ children }) => {
       cartAux = [...cart, cartProductos];
     }
     setCart(cartAux);
-    calcularTotal();
+    setTotal(total + producto.precio * contador);
+    console.log(cantidad);
   };
 
   const resetCarrito = () => {
@@ -35,25 +46,25 @@ const CartContext = ({ children }) => {
     setTotal(0);
   };
 
-  const calcularTotal = () => {
-    let totalAux = 0;
-    cart.forEach((item) => {
-      totalAux += item.producto.precio * item.contador;
-    });
-    setTotal(totalAux);
-  };
-
   const isInCart = (producto) => {
     return cart.find((item) => item.producto.id === producto.id);
+  };
+
+  const displayCarrito = () => {
+    let contador = 0;
+    cart.forEach((item) => {
+      contador += item.contador;
+    });
+    return contador;
   };
 
   const valor = {
     carrito: cart,
     total: total,
     agregarAlCarrito: agregarAlCarrito,
-    removerDelCart: removerDelCart,
+    disminuirCart: disminuirCart,
     resetCarrito: resetCarrito,
-    calcularTotal: calcularTotal,
+    displayCarrito: displayCarrito,
   };
 
   return <Provider value={valor}>{children}</Provider>;

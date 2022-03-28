@@ -1,12 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const IrAlCarrito = () => {
-  return (
-    <div className="itemDetail">
-      <p className="detailTitulo">Ir al carrito</p>
-      <p></p>
-    </div>
-  );
+  return <Link to="/cart">Terminar compra</Link>;
 };
 
 export default IrAlCarrito;
