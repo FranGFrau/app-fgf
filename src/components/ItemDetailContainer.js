@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import ItemDetail from "./ItemDetail";
 import { db } from "./Firebase";
-import { collection, getDoc } from "firebase/firestore";
+import { collection, getDoc, doc } from "firebase/firestore";
 import { useParams } from "react-router-dom";
 
 const ItemDetailContainer = () => {
@@ -12,7 +12,7 @@ const ItemDetailContainer = () => {
   const { id } = useParams();
 
   const productosCollection = collection(db, "Productos");
-  const documentos = getDoc(productosCollection, "id");
+  const documentos = getDoc(doc(productosCollection, id));
 
   useEffect(() => {
     documentos

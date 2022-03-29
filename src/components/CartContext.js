@@ -22,8 +22,8 @@ const CartContext = ({ children }) => {
 
   const agregarAlCarrito = (producto, contador) => {
     let cartProductos = { producto, contador };
-
     let cartAux = [];
+
     setCantidad(cantidad + contador);
 
     if (isInCart(producto)) {
