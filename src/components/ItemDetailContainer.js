@@ -11,18 +11,18 @@ const ItemDetailContainer = () => {
   const [carga, setCarga] = useState(true);
   const { id } = useParams();
 
-  const productosCollection = collection(db, "Productos");
-  const documentos = getDoc(doc(productosCollection, id));
-
   useEffect(() => {
-    documentos
-      .then((respuesta) => {
-        const producto = respuesta.data();
-        setItem(producto);
+    const productosCollection = doc(db, "Productos", id);
+    getDoc(productosCollection)
+      .then((res) => {
+        if (res.exists()) {
+          setItem({ id: res.id, ...res.data() });
+          setCarga(false);
+        }
+        return null;
       })
-      .catch((error) => console.log(error))
-      .finally(() => setCarga(false));
-  }, []);
+      .catch(console.error);
+  }, [id]);
   return (
     <div className="itemDetailList">
       <ItemDetail obj={item} carga={carga} />

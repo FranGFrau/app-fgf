@@ -6,9 +6,6 @@ import { useContext } from "react";
 const CardWidget = () => {
   const resultado = useContext(context);
   const contador = resultado.cantidad;
-  useEffect(() => {
-    console.log(resultado.cantidad);
-  }, [resultado.cantidad]);
 
   return (
     <Link to="/cart">
