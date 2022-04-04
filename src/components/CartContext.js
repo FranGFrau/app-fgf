@@ -1,4 +1,7 @@
 import { createContext, useState } from "react";
+import { serverTimestamp, collection, addDoc } from "firebase/firestore";
+import { db } from "./Firebase";
+
 export const context = createContext();
 const { Provider } = context;
 
@@ -57,14 +60,32 @@ const CartContext = ({ children }) => {
     });
     return contador;
   };
+  const terminarCompra = (cliente) => {
+    const orden = {
+      buyer: {
+        name: cliente.nombre,
+        lastName: cliente.apellido,
+        email: cliente.email,
+        phone: cliente.telefono,
+      },
+      items: cart,
+      total: total,
+      date: serverTimestamp(),
+    };
+    const ordenesCollection = collection(db, "Ordenes");
+    const pedido = addDoc(ordenesCollection, orden);
+    console.log(pedido);
+  };
 
   const valor = {
     carrito: cart,
     total: total,
+    cantidad: cantidad,
     agregarAlCarrito: agregarAlCarrito,
     disminuirCart: disminuirCart,
     resetCarrito: resetCarrito,
     displayCarrito: displayCarrito,
+    terminarCompra: terminarCompra,
   };
 
   return <Provider value={valor}>{children}</Provider>;

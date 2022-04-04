@@ -4,6 +4,7 @@ import { context } from "./CartContext";
 
 const Cart = () => {
   const resultado = useContext(context);
+
   return (
     <div>
       <h1>Carrito</h1>
@@ -30,6 +31,7 @@ const Cart = () => {
       </div>
       <p>Total: {resultado.total}</p>
       <button onClick={resultado.resetCarrito}>Reset</button>
+      <Link to="/form">Formulario</Link>
     </div>
   );
 };
