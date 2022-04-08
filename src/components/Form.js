@@ -16,8 +16,6 @@ const Form = () => {
 
   const terminarCompra = async (e) => {
     e.preventDefault();
-    console.log("cliente", cliente);
-    console.log("cart", carrito);
     const orden = {
       buyer: {
         name: cliente.nombre,
@@ -29,7 +27,6 @@ const Form = () => {
       total: total,
       date: serverTimestamp(),
     };
-    console.log("orden", orden);
 
     if (
       carrito.length > 0 &&

@@ -41,7 +41,6 @@ const CartContext = ({ children }) => {
     }
     setCart(cartAux);
     setTotal(total + producto.precio * contador);
-    console.log(cantidad);
   };
 
   const resetCarrito = () => {
@@ -74,7 +73,6 @@ const CartContext = ({ children }) => {
     };
     const ordenesCollection = collection(db, "Ordenes");
     const pedido = addDoc(ordenesCollection, orden);
-    console.log(pedido);
   };
 
   const valor = {

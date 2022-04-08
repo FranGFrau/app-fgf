@@ -9,7 +9,7 @@ header {
   width: 100%;
   height: 90px;
   display: flex;
-  background-color: rgb(0, 100, 255);
+  background-color: #005aff;
 }
 header a {
   width: 25%;
@@ -32,9 +32,17 @@ header .links .item {
   width: 100px;
   text-decoration: none;
   border: 5px;
-  background-color: rgb(0, 90, 255);
+  background-color: rgb(0, 100, 255);
   color: white;
   margin: 0 2rem;
+}
+
+header div .widget p {
+  background-color: rgb(235, 59, 59);
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  width: 20px;
 }
 header .links button {
   background-color: rgb(0, 100, 255);
@@ -56,11 +64,11 @@ main .itemListCont p {
   background-color: grey;
   text-align: center;
   padding-top: 35px;
-  font-size: xx-laDetailrge;
+  font-size: xx-large;
 }
 main .itemList {
   width: 100%;
-  background-color: rgb(0, 100, 255);
+  background-color: grey;
   color: white;
   display: flex;
   flex-wrap: wrap;
@@ -90,11 +98,12 @@ main .itemDetailList .itemDetail .detailTitulo {
 main .itemList .itemCard {
   width: 15%;
   height: 400px;
-  background-color: grey;
-  margin: auto;
+  background-color: #005aff;
   margin: 20px;
+  border-radius: 5px;
 }
 main .itemList .itemCard .itemCard__img {
+  margin-top: 10px;
   display: flex;
   justify-content: center;
 }
@@ -104,24 +113,30 @@ main .itemList .itemCard .itemCard__img img {
   text-align: center;
 }
 main .itemList .itemCard .itemCard__nombre {
+  margin-top: 0.5rem;
   font-size: larger;
   display: flex;
   justify-content: center;
+  border-top: 2.5px solid black;
+  border-bottom: 2.5px solid black;
 }
 main .itemList .itemCard .itemCard__precio {
   font-size: larger;
-  margin: 1rem;
+  display: flex;
+  margin: 0.5rem;
+  justify-content: center;
 }
 main .itemList .itemCard a {
   text-decoration: none;
+  color: black;
   margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 92%;
   height: 40px;
-
-  background-color: aliceblue;
+  border-radius: 5px;
+  background-color: #390dff;
 }
 main .itemDetailList .item {
   width: 24%;
@@ -172,5 +187,5 @@ main .itemDetailList button {
 footer {
   width: 100%;
   height: 90px;
-  background-color: rgb(0, 90, 255);
+  background-color: #005aff;
 }

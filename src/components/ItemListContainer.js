@@ -23,6 +23,7 @@ const ItemListContainer = () => {
         respuesta.forEach((doc) => {
           const producto = { id: doc.id, ...doc.data() };
           aux.push(producto);
+          console.log(producto);
         });
         setData(aux);
       });
@@ -39,24 +40,6 @@ const ItemListContainer = () => {
         .catch((error) => console.log(error))
         .finally(() => setCarga(false));
     }
-    /*     const promesa = new Promise((res) => {
-      setTimeout(() => {
-        res(productos);
-      }, 2000);
-    });
-    promesa
-      .then((respuesta) => {
-        const response = id
-          ? productos.filter((productos) => productos.tipo === id)
-          : productos;
-        setData(response);
-      })
-      .catch((error) => {
-        console.log(error);
-      })
-      .finally(() => {
-        setCarga(false);
-      }); */
   }, [id]);
 
   return (

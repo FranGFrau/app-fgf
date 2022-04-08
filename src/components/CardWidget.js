@@ -8,7 +8,7 @@ const CardWidget = () => {
   const contador = resultado.cantidad;
 
   return (
-    <Link to="/cart">
+    <Link to="/cart" className="widget">
       <p>{contador === 0 ? null : contador}</p>
       <img
         src="https://img.icons8.com/pastel-glyph/64/000000/shopping-cart--v1.png"
