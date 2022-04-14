@@ -2,7 +2,7 @@
 
 ## Descripción del proyecto
 
-Esste es mi proyecto final del curso de ReactJS para CoderHouse, consiste en un e-comerce hecho con React, mendiante el uso de
+Esste es mi proyecto final del curso de ReactJS para CoderHouse, consiste en un e-comerce hecho con React, junto con React Hooks y React Router como framework principal para los componentes y Finalmente usando Firebase como base de datos
 
 ## Librerias y Frameworks requeridos
 
@@ -24,15 +24,15 @@ Esste es mi proyecto final del curso de ReactJS para CoderHouse, consiste en un 
 
    https://git-scm.com
 
-3. Descargar la versión más reciente de npm. En la linea de comandos colocar:
+3. Descargar la versión más reciente de npm. En la linea de comandos ejecutar:
 
    npm install -g npm
 
-4. Clonar el repositorio poniendo del siguiente comando en la consola de Git Bash:
+4. Clonar el repositorio ejecutando del siguiente comando en la consola de Git Bash:
 
    $ git clone https://github.com/FranGFrau/app-fgf
 
-5. Instalar las respectivas dependecias del proyecto. En la consola colocar el siguiente comando:
+5. Instalar las respectivas dependecias del proyecto. En la consola ejecutar el siguiente comando:
 
    npm install
 
@@ -42,7 +42,7 @@ Esste es mi proyecto final del curso de ReactJS para CoderHouse, consiste en un 
 
 ## Instrucciones de uso
 
-1. Buscar en la tiendo el/los producto/s deseado/s y sumelo/s al carrito, los productos estan filtrados por categorías para mayor accesibilidad
+1. Buscar en la tienda el/los producto/s deseado/s y sumelo/s al carrito, los productos estan filtrados por categorías para mayor accesibilidad
 2. Vaya al carrito y visualice sus producto/s seleccionado/s y presione el botón "Formulario"
 3. Llene la información requerida en el formulario
 4. Finalice su compra presionando su respectivo botón

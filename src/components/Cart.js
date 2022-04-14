@@ -41,7 +41,7 @@ const Cart = () => {
           </Link>
         </div>
       </div>
-      <div className="sideCart">a</div>
+      <div className="sideCart">.</div>
     </div>
   );
 };
