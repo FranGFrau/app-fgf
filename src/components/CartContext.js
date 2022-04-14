@@ -46,6 +46,7 @@ const CartContext = ({ children }) => {
   const resetCarrito = () => {
     setCart([]);
     setTotal(0);
+    setCantidad(0);
   };
 
   const isInCart = (producto) => {
@@ -72,7 +73,7 @@ const CartContext = ({ children }) => {
       date: serverTimestamp(),
     };
     const ordenesCollection = collection(db, "Ordenes");
-    const pedido = addDoc(ordenesCollection, orden);
+    addDoc(ordenesCollection, orden);
   };
 
   const valor = {

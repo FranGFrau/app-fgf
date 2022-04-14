@@ -1,7 +1,7 @@
 import React from "react";
 
 const Footer = () => {
-  return <footer>Hola, soy un texto de footer provisorio</footer>;
+  return <footer>© Copyright © Franco Gonzalez Frau 2022</footer>;
 };
 
 export default Footer;

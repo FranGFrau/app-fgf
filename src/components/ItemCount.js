@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import IrAlCarrito from "./IrAlCarrito";
 
 const ItemCount = (props) => {
   const [valor, setValor] = useState(props.initial);
@@ -21,7 +22,6 @@ const ItemCount = (props) => {
 
   return (
     <div className="item">
-      <img src="..." alt="" />
       <div className="box">
         <button onClick={clickDecrecer}>-</button>
         <p>{valor}</p>
@@ -34,6 +34,7 @@ const ItemCount = (props) => {
           {"Agregar al carrito"}
         </button>
       </div>
+      {props.estado ? <IrAlCarrito /> : ""}
     </div>
   );
 };

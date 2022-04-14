@@ -19,13 +19,12 @@ const ItemListContainer = () => {
       const filtro = query(productosCollection, where("tipo", "==", id));
 
       getDocs(filtro).then((respuesta) => {
-        const aux = [];
-        respuesta.forEach((doc) => {
-          const producto = { id: doc.id, ...doc.data() };
-          aux.push(producto);
-          console.log(producto);
-        });
-        setData(aux);
+        setData(
+          respuesta.docs.map((productos) => ({
+            ...productos.data(),
+            id: productos.id,
+          }))
+        );
       });
     } else {
       documentos

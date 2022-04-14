@@ -1,5 +1,4 @@
 import React, { useContext, useState } from "react";
-import IrAlCarrito from "./IrAlCarrito";
 import ItemCount from "./ItemCount";
 import { context } from "./CartContext";
 
@@ -16,11 +15,13 @@ const ItemDetail = (props) => {
     <>
       <p>{props.carga ? "Cargando." : ""}</p>
       <img src={props.obj.imagen} alt="" />
-      {estado ? (
-        <IrAlCarrito />
-      ) : (
-        <ItemCount stock={props.obj.stock} initial={1} onAdd={onAdd} />
-      )}
+      <ItemCount
+        stock={props.obj.stock}
+        initial={1}
+        onAdd={onAdd}
+        estado={estado}
+      />
+
       <div className="itemDetail">
         <p className="detailTitulo">{props.obj.nombre}</p>
         <p>{props.obj.editorial}</p>

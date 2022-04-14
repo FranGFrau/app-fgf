@@ -46,11 +46,11 @@ const Form = () => {
   return (
     <>
       {carga ? (
-        <div>
+        <div className="orden">
           <h2>Gracias por su compra</h2>
           <p>
-            Su numero de orden es {idPedido}, en breve nos comunicaremos con
-            usted para confirmar su pedido
+            Su numero de orden es <p className="nOrden">{idPedido}</p>, en breve
+            nos comunicaremos con usted para confirmar su pedido
           </p>
         </div>
       ) : (
