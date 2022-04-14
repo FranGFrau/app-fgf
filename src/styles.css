@@ -338,7 +338,7 @@ main .cart .inCart .isInCart button:hover {
   cursor: pointer;
 }
 main .mainCart .sideCart {
-  display: flex;
+  max-height: 250px;
   flex-direction: column;
   margin: 1rem;
   width: 30%;
