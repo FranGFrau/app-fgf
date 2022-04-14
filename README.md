@@ -16,17 +16,28 @@ Esste es mi proyecto final del curso de ReactJS para CoderHouse, consiste en un 
 
 ## Proceso de instalación
 
-1. Descargar e intalar Node.js
+1. Descargar e instalar Node.js
+
    https://nodejs.org/en/download/
+
 2. Instalar Git y logear su cuenta
+
    https://git-scm.com
+
 3. Descargar la versión más reciente de npm. En la linea de comandos colocar:
+
    npm install -g npm
-4. Clonar el repositorio poniendo del siguiente comando en la gonsola de Git Bash:
+
+4. Clonar el repositorio poniendo del siguiente comando en la consola de Git Bash:
+
    $ git clone https://github.com/FranGFrau/app-fgf
-5. Instalar las respectivas dependecias del proyecto. En la consola poner el siguiente comando:
+
+5. Instalar las respectivas dependecias del proyecto. En la consola colocar el siguiente comando:
+
    npm install
+
 6. Iniciar el repositorio. en la linea de comando, ejecutar el siguiente comando:
+
    npm start
 
 ## Instrucciones de uso
